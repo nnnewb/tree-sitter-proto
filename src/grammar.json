@@ -87,25 +87,29 @@
           "value": "import"
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "weak"
-                },
-                {
-                  "type": "STRING",
-                  "value": "public"
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
+          "type": "FIELD",
+          "name": "modifier",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "weak"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "public"
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
         },
         {
           "type": "FIELD",
@@ -129,8 +133,12 @@
           "value": "package"
         },
         {
-          "type": "SYMBOL",
-          "name": "full_ident"
+          "type": "FIELD",
+          "name": "package_name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "full_ident"
+          }
         },
         {
           "type": "STRING",
@@ -268,8 +276,12 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "identifier"
+          "type": "FIELD",
+          "name": "enum_member_name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
         },
         {
           "type": "STRING",
@@ -461,8 +473,12 @@
           "name": "type"
         },
         {
-          "type": "SYMBOL",
-          "name": "identifier"
+          "type": "FIELD",
+          "name": "field_name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
         },
         {
           "type": "STRING",
@@ -553,8 +569,12 @@
           "value": "oneof"
         },
         {
-          "type": "SYMBOL",
-          "name": "identifier"
+          "type": "FIELD",
+          "name": "field_name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
         },
         {
           "type": "STRING",
@@ -594,8 +614,12 @@
           "name": "type"
         },
         {
-          "type": "SYMBOL",
-          "name": "identifier"
+          "type": "FIELD",
+          "name": "field_name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
         },
         {
           "type": "STRING",
@@ -660,8 +684,12 @@
           "value": ">"
         },
         {
-          "type": "SYMBOL",
-          "name": "identifier"
+          "type": "FIELD",
+          "name": "field_name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
         },
         {
           "type": "STRING",
@@ -1053,8 +1081,12 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "message_or_enum_type"
+          "type": "FIELD",
+          "name": "request_type",
+          "content": {
+            "type": "SYMBOL",
+            "name": "message_or_enum_type"
+          }
         },
         {
           "type": "STRING",
@@ -1081,8 +1113,12 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "message_or_enum_type"
+          "type": "FIELD",
+          "name": "response_type",
+          "content": {
+            "type": "SYMBOL",
+            "name": "message_or_enum_type"
+          }
         },
         {
           "type": "STRING",

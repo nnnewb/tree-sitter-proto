@@ -5,6 +5,7 @@
   "main": "bindings/node",
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",
+    "build-wasm": "tree-sitter generate && tree-sitter build-wasm",
     "test": "tree-sitter test",
     "test-windows": "tree-sitter test"
   },
