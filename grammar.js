@@ -83,11 +83,11 @@ module.exports = grammar({
         field('field_name', $.identifier),
         '=',
         $.field_number,
-        optional(seq('[', $.field_options, ']')),
+        optional($.field_options),
         ';'
       ),
 
-    field_options: ($) => seq($.field_option, repeat(seq(',', $.field_option))),
+    field_options: ($) => seq('[', $.field_option, repeat(seq(',', $.field_option)), ']'),
 
     field_option: ($) => seq($._option_name, '=', $.constant),
 

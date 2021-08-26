@@ -492,21 +492,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "["
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "field_options"
-                },
-                {
-                  "type": "STRING",
-                  "value": "]"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "field_options"
             },
             {
               "type": "BLANK"
@@ -522,6 +509,10 @@
     "field_options": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
         {
           "type": "SYMBOL",
           "name": "field_option"
@@ -541,6 +532,10 @@
               }
             ]
           }
+        },
+        {
+          "type": "STRING",
+          "value": "]"
         }
       ]
     },
