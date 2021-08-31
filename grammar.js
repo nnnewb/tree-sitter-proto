@@ -80,12 +80,14 @@ module.exports = grammar({
 
         optional('repeated'),
         $.type,
-        field('field_name', $.identifier),
+        $.field_name,
         '=',
         $.field_number,
         optional($.field_options),
         ';'
       ),
+
+    field_name: ($) => $.identifier,
 
     field_options: ($) => seq('[', $.field_option, repeat(seq(',', $.field_option)), ']'),
 

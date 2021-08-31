@@ -473,12 +473,8 @@
           "name": "type"
         },
         {
-          "type": "FIELD",
-          "name": "field_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
+          "type": "SYMBOL",
+          "name": "field_name"
         },
         {
           "type": "STRING",
@@ -505,6 +501,10 @@
           "value": ";"
         }
       ]
+    },
+    "field_name": {
+      "type": "SYMBOL",
+      "name": "identifier"
     },
     "field_options": {
       "type": "SEQ",
