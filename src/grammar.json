@@ -564,12 +564,8 @@
           "value": "oneof"
         },
         {
-          "type": "FIELD",
-          "name": "field_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
+          "type": "SYMBOL",
+          "name": "field_name"
         },
         {
           "type": "STRING",
@@ -609,12 +605,8 @@
           "name": "type"
         },
         {
-          "type": "FIELD",
-          "name": "field_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
+          "type": "SYMBOL",
+          "name": "field_name"
         },
         {
           "type": "STRING",
@@ -679,12 +671,8 @@
           "value": ">"
         },
         {
-          "type": "FIELD",
-          "name": "field_name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
+          "type": "SYMBOL",
+          "name": "field_name"
         },
         {
           "type": "STRING",

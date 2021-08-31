@@ -373,22 +373,15 @@
   {
     "type": "map_field",
     "named": true,
-    "fields": {
-      "field_name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "field_name",
+          "named": true
+        },
         {
           "type": "field_number",
           "named": true
@@ -503,24 +496,17 @@
   {
     "type": "oneof",
     "named": true,
-    "fields": {
-      "field_name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "empty_statement",
+          "named": true
+        },
+        {
+          "type": "field_name",
           "named": true
         },
         {
@@ -537,22 +523,15 @@
   {
     "type": "oneof_field",
     "named": true,
-    "fields": {
-      "field_name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "field_name",
+          "named": true
+        },
         {
           "type": "field_number",
           "named": true

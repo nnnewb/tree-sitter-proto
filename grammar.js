@@ -98,14 +98,14 @@ module.exports = grammar({
     oneof: ($) =>
       seq(
         'oneof',
-        field('field_name', $.identifier),
+        $.field_name,
         '{',
         repeat(choice($.option, $.oneof_field, $.empty_statement)),
         '}'
       ),
 
     oneof_field: ($) =>
-      seq($.type, field('field_name', $.identifier), '=', $.field_number, optional(seq('[', $.field_options, ']'))),
+      seq($.type, $.field_name, '=', $.field_number, optional(seq('[', $.field_options, ']'))),
 
     // mapField = "map" "<" keyType "," type ">" mapName "=" fieldNumber [ "[" fieldOptions "]" ] ";"
     // keyType = "int32" | "int64" | "uint32" | "uint64" | "sint32" | "sint64" |
@@ -118,7 +118,7 @@ module.exports = grammar({
         ',',
         $.type,
         '>',
-        field('field_name', $.identifier),
+        $.field_name,
         '=',
         $.field_number,
         optional(seq('[', $.field_options, ']')),
