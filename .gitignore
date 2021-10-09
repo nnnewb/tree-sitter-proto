@@ -6,5 +6,5 @@ target
 *.wasm
 bindings
 Cargo.toml
-python.gyp
+binding.gyp
 src
