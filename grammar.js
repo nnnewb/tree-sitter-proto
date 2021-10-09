@@ -58,7 +58,7 @@ module.exports = grammar({
 
     // message = "message" messageName messageBody
     // messageBody = "{" { field | enum | message | option | oneof | mapField | reserved | emptyStatement } "}"
-    message: ($) => seq('message', $.message_name, $.message_body),
+    message: ($) => seq('message', field('message_name', $.message_name), $.message_body),
 
     message_body: ($) =>
       seq(
@@ -95,17 +95,9 @@ module.exports = grammar({
 
     // oneof = "oneof" oneofName "{" { option | oneofField | emptyStatement } "}"
     // oneofField = type fieldName "=" fieldNumber [ "[" fieldOptions "]" ] ";"
-    oneof: ($) =>
-      seq(
-        'oneof',
-        $.field_name,
-        '{',
-        repeat(choice($.option, $.oneof_field, $.empty_statement)),
-        '}'
-      ),
+    oneof: ($) => seq('oneof', $.field_name, '{', repeat(choice($.option, $.oneof_field, $.empty_statement)), '}'),
 
-    oneof_field: ($) =>
-      seq($.type, $.field_name, '=', $.field_number, optional(seq('[', $.field_options, ']'))),
+    oneof_field: ($) => seq($.type, $.field_name, '=', $.field_number, optional(seq('[', $.field_options, ']'))),
 
     // mapField = "map" "<" keyType "," type ">" mapName "=" fieldNumber [ "[" fieldOptions "]" ] ";"
     // keyType = "int32" | "int64" | "uint32" | "uint64" | "sint32" | "sint64" |

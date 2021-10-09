@@ -4,3 +4,7 @@ build
 package-lock.json
 target
 *.wasm
+bindings
+Cargo.toml
+python.gyp
+src
